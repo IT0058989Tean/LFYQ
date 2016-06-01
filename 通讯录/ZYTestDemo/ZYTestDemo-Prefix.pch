@@ -1,0 +1,35 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+//extern void LogFunction(NSString *format, ...);
+//#ifdef DEBUG
+//#define __BASENAME__ (strrchr(__FILE__, '/') + 1)
+//#define NSLogAlt(...) \
+//LogFunction(@ "%s(%s:%05d)%@" , __PRETTY_FUNCTION__, __BASENAME__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+//#else
+//#define NSLogAlt(...)
+//#endif
+//#define NSLog(...) NSLogAlt(__VA_ARGS__)
+//
+
+
+
+#define FOLDER @"UserData"
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "UserRWFiles.h"
+//    #import "MTLog.h"
+//    #import "MTLogPluginRoute.h"
+    #import "MYLog.h"
+#endif
